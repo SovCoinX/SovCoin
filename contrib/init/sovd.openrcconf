@@ -1,0 +1,33 @@
+# /etc/conf.d/sovd: config file for /etc/init.d/sovd
+
+# Config file location
+#SOVD_CONFIGFILE="/etc/sovcore/sov.conf"
+
+# What directory to write pidfile to?  (created and owned by $SOVD_USER)
+#SOVD_PIDDIR="/var/run/sovd"
+
+# What filename to give the pidfile
+#SOVD_PIDFILE="${SOVD_PIDDIR}/sovd.pid"
+
+# Where to write sovd data (be mindful that the blockchain is large)
+#SOVD_DATADIR="/var/lib/sovd"
+
+# User and group to own sovd process
+#SOVD_USER="sovcore"
+#SOVD_GROUP="sovcore"
+
+# Path to sovd executable
+#SOVD_BIN="/usr/bin/sovd"
+
+# Nice value to run sovd under
+#SOVD_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+SOVD_OPTS="-disablewallet"
+
+# The timeout in seconds OpenRC will wait for sovd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+SOVD_SIGTERM_TIMEOUT=60

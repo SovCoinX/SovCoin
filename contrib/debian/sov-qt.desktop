@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=SOV
+Comment=SOV P2P Cryptocurrency
+Comment[fr]=SOV, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=SOV, eşten eşe kriptografik sanal para birimi
+Exec=sov-qt %u
+Terminal=false
+Type=Application
+Icon=sov128
+MimeType=x-scheme-handler/sov;
+Categories=Office;Finance;
