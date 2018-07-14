@@ -199,11 +199,11 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("999ad67d669569e6168d11f92cd4ee8a056a2a5754253164ec8fb9593f923267"));
 
         vSeeds.push_back(CDNSSeedData("217.69.13.119", "217.69.13.119"));
-vSeeds.push_back(CDNSSeedData("45.76.189.173", "45.76.189.173"));
-vSeeds.push_back(CDNSSeedData("207.148.80.120", "207.148.80.120"));
-        //vSeeds.push_back(CDNSSeedData("fixed-seeds.sovproject.org", "one.fixed-seeds.sovproject.org"));
-        //vSeeds.push_back(CDNSSeedData("fixed-seeds.sovproject.org", "two.fixed-seeds.sovproject.org"));
-        //vSeeds.push_back(CDNSSeedData("fixed-seeds.sovproject.org", "three.fixed-seeds.sovproject.org"));
+        vSeeds.push_back(CDNSSeedData("45.76.189.173", "45.76.189.173"));
+        vSeeds.push_back(CDNSSeedData("207.148.80.120", "207.148.80.120"));
+        vSeeds.push_back(CDNSSeedData("202.182.114.244", "202.182.114.244"));
+        vSeeds.push_back(CDNSSeedData("80.240.31.33", "80.240.31.33"));
+        vSeeds.push_back(CDNSSeedData("45.32.26.177", "45.32.26.177"));
         // vFixedSeeds.clear();
         // vSeeds.clear();
 
