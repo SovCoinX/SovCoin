@@ -1,5 +1,5 @@
 ---
-name: "sov-win-0.12"
+name: "sov-win-1.3"
 enable_cache: true
 suites:
 - "trusty"
