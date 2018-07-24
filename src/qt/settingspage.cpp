@@ -44,6 +44,7 @@ SettingsPage::SettingsPage(const PlatformStyle *platformStyle, QWidget *parent) 
     ui->databaseCache->setMaximum(nMaxDbCache);
     ui->threadsScriptVerif->setMinimum(-GetNumCores());
     ui->threadsScriptVerif->setMaximum(MAX_SCRIPTCHECK_THREADS);
+    ui->frameMain->setAttribute(Qt::WA_TransparentForMouseEvents, true);
 
     /* Network elements init */
 #ifndef USE_UPNP
@@ -241,7 +242,7 @@ void SettingsPage::showBackups()
 
 bool SettingsPage::eventFilter(QObject *obj, QEvent *event) 
 {
-    if (event->type() == Qt::LeftButton) {
+    if (event->type() == QMouseEvent::MouseButtonPress) {
         if (obj == ui->frameNavMain) {
             ui->frameMain->setVisible(true);
             this->hideNav();
