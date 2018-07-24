@@ -35,6 +35,35 @@
 
 extern CWallet* pwalletMain;
 
+bool SettingsPage::eventFilter(QObject *obj, QEvent *event) 
+{
+    if (event->type() == QMouseEvent::MouseButtonPress) {
+        if (obj == ui->frameNavMain) {
+            ui->frameMain->setVisible(true);
+            this->hideNav();
+            return true;
+        } else if (obj == ui->frameNavNetwork) {
+            ui->frameNetwork->setVisible(true);
+            this->hideNav();
+            return true;
+        } else if (obj == ui->frameNavExpert) {
+            ui->frameExpert->setVisible(true);
+            this->hideNav();
+            return true;
+        } else if (obj == ui->frameNavOpenConf) {
+            this->showConfEditor();
+            return true;
+        } else if (obj == ui->frameNavOpenMNConf) {
+            this->showMNConfEditor();
+            return true;
+        } else if (obj == ui->frameNavOpenBackups) {
+            this->showBackups();
+            return true;
+        }
+    }
+    return obj->eventFilter(obj, event);
+}
+
 SettingsPage::SettingsPage(const PlatformStyle *platformStyle, QWidget *parent) :
     ui(new Ui::SettingsPage)
 {
@@ -240,34 +269,6 @@ void SettingsPage::showBackups()
 }
 
 
-bool SettingsPage::eventFilter(QObject *obj, QEvent *event) 
-{
-    if (event->type() == QMouseEvent::MouseButtonPress) {
-        if (obj == ui->frameNavMain) {
-            ui->frameMain->setVisible(true);
-            this->hideNav();
-            return true;
-        } else if (obj == ui->frameNavNetwork) {
-            ui->frameNetwork->setVisible(true);
-            this->hideNav();
-            return true;
-        } else if (obj == ui->frameNavExpert) {
-            ui->frameExpert->setVisible(true);
-            this->hideNav();
-            return true;
-        } else if (obj == ui->frameNavOpenConf) {
-            this->showConfEditor();
-            return true;
-        } else if (obj == ui->frameNavOpenMNConf) {
-            this->showMNConfEditor();
-            return true;
-        } else if (obj == ui->frameNavOpenBackups) {
-            this->showBackups();
-            return true;
-        }
-    }
-    return obj->eventFilter(obj, event);
-}
 
 void SettingsPage::hideNav() 
 {
