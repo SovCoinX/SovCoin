@@ -68,12 +68,12 @@ SettingsPage::SettingsPage(const PlatformStyle *platformStyle, QWidget *parent) 
     ui(new Ui::SettingsPage)
 {
     ui->setupUi(this);
+    ui->setAttribute(Qt::WA_TransparentForMouseEvents, true);
     /* Main elements init */
     ui->databaseCache->setMinimum(nMinDbCache);
     ui->databaseCache->setMaximum(nMaxDbCache);
     ui->threadsScriptVerif->setMinimum(-GetNumCores());
     ui->threadsScriptVerif->setMaximum(MAX_SCRIPTCHECK_THREADS);
-    ui->frameMain->setAttribute(Qt::WA_TransparentForMouseEvents, true);
 
     /* Network elements init */
 #ifndef USE_UPNP
