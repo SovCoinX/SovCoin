@@ -68,7 +68,6 @@ SettingsPage::SettingsPage(const PlatformStyle *platformStyle, QWidget *parent) 
     ui(new Ui::SettingsPage)
 {
     ui->setupUi(this);
-    ui->SettingsPage->setAttribute(Qt::WA_TransparentForMouseEvents, true);
     /* Main elements init */
     ui->databaseCache->setMinimum(nMinDbCache);
     ui->databaseCache->setMaximum(nMaxDbCache);
@@ -272,7 +271,7 @@ void SettingsPage::showBackups()
 
 void SettingsPage::hideNav() 
 {
-    //ui->frameNav->setEnabled(false);
+    ui->frameNav->setAttribute(Qt::WA_TransparentForMouseEvents, true);
     ui->frameNav->setVisible(false);
     ui->scrollArea->setVisible(true);
     ui->frameControlButtons->setVisible(true);
@@ -280,7 +279,7 @@ void SettingsPage::hideNav()
 
 void SettingsPage::showNav() 
 {
-    //ui->frameNav->setEnabled(true);
+    ui->frameNav->setAttribute(Qt::WA_TransparentForMouseEvents, true);
     ui->frameMain->setVisible(false);
     ui->frameNetwork->setVisible(false);
     ui->frameExpert->setVisible(false);
