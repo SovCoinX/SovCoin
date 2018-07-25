@@ -68,7 +68,7 @@ SettingsPage::SettingsPage(const PlatformStyle *platformStyle, QWidget *parent) 
     ui(new Ui::SettingsPage)
 {
     ui->setupUi(this);
-    ui->setAttribute(Qt::WA_TransparentForMouseEvents, true);
+    ui->frame->setAttribute(Qt::WA_TransparentForMouseEvents, true);
     /* Main elements init */
     ui->databaseCache->setMinimum(nMinDbCache);
     ui->databaseCache->setMaximum(nMaxDbCache);
