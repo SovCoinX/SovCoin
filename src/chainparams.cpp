@@ -99,11 +99,11 @@ public:
         consensus.BIP34Hash = uint256S("0x000007d91d1254d60e2dd1ae580383070a4ddffa4c64c2eeb4a2f9ecc0414343");
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
 
-        consensus.nZawyLwmaAveragingWindow = 65;
-        consensus.nZawyLwmaAjustedWeight = 3927;
+        consensus.nZawyLwmaAveragingWindow = 80;
+        consensus.nZawyLwmaAjustedWeight = 4827;
 
-        consensus.nPowTargetTimespan = 1 * 60; // SOV: 1 hour
-        consensus.nPowTargetSpacing = 1 * 60; // SOV: 2 minutes
+        consensus.nPowTargetTimespan = 1 * 60; // SOV: 1 minute
+        consensus.nPowTargetSpacing = 1 * 60; // SOV: 1 minute
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.useDarkGravityWave = false;
