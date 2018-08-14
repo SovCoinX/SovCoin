@@ -11,7 +11,7 @@
 
 #include <stdint.h>
 
-#include "compat/byteswap.h"
+#include "byteswap.h"
 
 #if defined(HAVE_ENDIAN_H)
 #include <endian.h>
