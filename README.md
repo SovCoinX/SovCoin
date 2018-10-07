@@ -2,7 +2,7 @@ SOV Core 1.3
 ===============================
 
 
-https://www.sovecore.org
+https://www.sovcore.org
 
 What is SOV?
 ----------------
@@ -14,7 +14,7 @@ are carried out collectively by the network. SOV Core is the name of the open
 source software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the SOV Core software, see https://www.sovecore.org/.
+the SOV Core software, see https://www.sovcore.org/.
 
 
 License
