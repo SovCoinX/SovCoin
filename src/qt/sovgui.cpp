@@ -20,6 +20,7 @@
 #include "rpcconsole.h"
 #include "utilitydialog.h"
 #include "toolspage.h"
+#include "amount.h"
 
 #ifdef ENABLE_WALLET
 #include "walletframe.h"
