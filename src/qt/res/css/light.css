@@ -352,7 +352,7 @@ background:#F8F6F6;
 
 QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical, QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal { /* Define Arrow Button Dimensions */
 background-color:#F8F6F6;
-border: 1px solid #f2f0f0;
+border: 1px solid #000;
 width:16px;
 height:16px;
 }
