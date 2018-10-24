@@ -7,7 +7,7 @@ padding-bottom: 20px;
 }
 
 QStatusBar {
-background-color:#ffffff;
+background-color:#fff;
 }
 
 .QFrame {
@@ -143,7 +143,7 @@ background:#f2f2f2;
 }
 
 QComboBox:editable {
-background:#fff;
+background:#ffff;
 color:#000;
 border:0px solid #000;
 }
