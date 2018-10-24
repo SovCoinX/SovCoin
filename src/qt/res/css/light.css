@@ -158,7 +158,7 @@ border-image: url(':/images/light/drkblue_downArrow') 0 0 0 0 stretch stretch;
 }
 
 QComboBox QListView {
-background:#f5b7b1;
+background:#fff;
 border:1px solid #000;
 padding-right:1px;
 padding-left:1px;
@@ -303,7 +303,7 @@ border:0px;
 }
 
 .QTableView { /* Table - has to be selected as a class otherwise it throws off QCalendarWidget */
-background:transparent;
+background:#f5b7b1;
 border:0px solid #000;
 }
 
