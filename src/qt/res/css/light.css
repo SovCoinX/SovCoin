@@ -143,7 +143,7 @@ background:#f2f2f2;
 }
 
 QComboBox:editable {
-background: #f5b7b1;
+background:#fff;
 color:#000;
 border:0px solid #000;
 }
@@ -198,7 +198,7 @@ QAbstractSpinBox::up-button {
 subcontrol-origin: border;
 subcontrol-position: top right;
 width:21px;
-background:#fcfcfc;
+background:#f5b7b1;
 border-left:0px;
 border-right:1px solid #000;
 border-top:1px solid #000;
