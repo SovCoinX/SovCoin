@@ -103,7 +103,7 @@ public:
         consensus.nZawyLwmaAjustedWeight = 3927;
 
         consensus.nPowTargetTimespan = 1 * 60; // SOV: 1 hour
-        consensus.nPowTargetSpacing = 1 * 60; // SOV: 2 minutes
+        consensus.nPowTargetSpacing = 1 * 60; // SOV: 1 minutes
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.useDarkGravityWave = false;
