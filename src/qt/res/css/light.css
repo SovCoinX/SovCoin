@@ -143,7 +143,7 @@ background:#f2f2f2;
 }
 
 QComboBox:editable {
-background: #fff;
+background: #f5b7b1;
 color:#000;
 border:0px solid #000;
 }
@@ -303,7 +303,7 @@ border:0px;
 }
 
 .QTableView { /* Table - has to be selected as a class otherwise it throws off QCalendarWidget */
-background:#f5b7b1;
+background:transparent;
 border:0px solid #000;
 }
 
