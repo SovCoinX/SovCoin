@@ -1,8 +1,9 @@
 SOV Core 2.0.1
 ===============================
 
-
-https://www.sovcore.org
+Website: https://www.sovcore.org
+Explorer: http://explorer.sovcore.org/
+Exchange: https://crex24.com/exchange/SOV-BTC
 
 What is SOV?
 ----------------
