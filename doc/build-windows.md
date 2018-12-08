@@ -18,7 +18,20 @@ installing the toolchain will be different.
 
 First install the toolchains:
 
+    add-apt-repository ppa:bitcoin/bitcoin
+    apt update
+    apt upgrade
+    apt install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils git libdb4.8-dev libdb4.8++-dev
+    apt install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev
     sudo apt-get install g++-mingw-w64-i686 mingw-w64-i686-dev g++-mingw-w64-x86-64 mingw-w64-x86-64-dev
+    
+
+Download the source:
+    
+    mkdir sov
+    cd sov
+    git clone https://github.com/SovCoinX/SovCoin.git
+    
 
 To build executables for Windows 32-bit:
 
