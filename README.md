@@ -1,4 +1,4 @@
-SOV Core 2.0.1
+SOV Core 2.0.2
 ===============================
 
 Website: https://www.sovcore.org
