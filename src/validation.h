@@ -158,7 +158,7 @@ extern size_t nCoinCacheUsage;
 extern CFeeRate minRelayTxFee;
 extern bool fAlerts;
 extern bool fEnableReplacement;
-
+extern const int nX16SOVFork;
 extern bool fLargeWorkForkFound;
 extern bool fLargeWorkInvalidChainFound;
 
