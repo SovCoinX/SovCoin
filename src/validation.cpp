@@ -85,7 +85,7 @@ size_t nCoinCacheUsage = 5000 * 300;
 uint64_t nPruneTarget = 0;
 bool fAlerts = DEFAULT_ALERTS;
 bool fEnableReplacement = DEFAULT_ENABLE_REPLACEMENT;
-
+const int nX16SOVFork = 250000;
 std::atomic<bool> fDIP0001WasLockedIn{false};
 std::atomic<bool> fDIP0001ActiveAtTip{false};
 
@@ -4389,8 +4389,7 @@ ThresholdState VersionBitsTipState(const Consensus::Params& params, Consensus::D
 
 bool IsX16SOV()
 {
-    // return (chainActive.Height > x);
-    return gArgs.GetBoolArg("-testnet", false);
+    return (chainActive.Height() >= nX16SOVFork || gArgs.GetBoolArg("-testnet", false));
 }
 
 class CMainCleanup
