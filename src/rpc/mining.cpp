@@ -173,10 +173,20 @@ UniValue generate(const UniValue& params, bool fHelp)
             LOCK(cs_main);
             IncrementExtraNonce(pblock, chainActive.Tip(), nExtraNonce);
         }
-        while (!CheckProofOfWork(pblock->GetHash(), pblock->nBits, Params().GetConsensus())) {
+        while (nMaxTries > 0 && pblock->nNonce < nInnerLoopCount && 
+                !CheckProofOfWork(Isx16SOV(nHeight) ? pblock->GetHashX16SOV() : pblock->GetHashX16r(), pblock->nBits, Params().GetConsensus())) 
+        
+        //while (!CheckProofOfWork(pblock->GetHash(), pblock->nBits, Params().GetConsensus())) {
             // Yes, there is a chance every nonce could fail to satisfy the -regtest
             // target -- 1 in 2^(2^32). That ain't gonna happen.
             ++pblock->nNonce;
+            --nMaxTries;
+        }
+        if (nMaxTries == 0) {
+              break;
+        }
+        if (pblock->nNonce == nInnerLoopCount) {
+              continue;
         }
         if (!ProcessNewBlock(Params(), pblock, true, NULL, NULL))
             throw JSONRPCError(RPC_INTERNAL_ERROR, "ProcessNewBlock, block not accepted");
