@@ -14,6 +14,7 @@
 #include "primitives/block.h"
 #include "uint256.h"
 #include "util.h"
+#include "validation.h"
 
 #include <math.h>
 
@@ -110,7 +111,10 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
 {
     // Only use Dark Gravity if is defined
     if (params.useDarkGravityWave || pindexLast->nHeight <= 100) {
-       return DarkGravityWave(pindexLast, params);
+       if ((pindexLast->nHeight+1 >= nX16SOVFork-5) && (pindexLast->nHeight+1 <= nX16SOVFork+5)) {
+        return UintToArith256(params.powLimit).GetCompact();
+       }
+        return DarkGravityWave(pindexLast, params);
     }
 
     return LwmaGetNextWorkRequired(pindexLast, pblock, params);
