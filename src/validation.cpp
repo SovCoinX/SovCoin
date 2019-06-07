@@ -1186,9 +1186,9 @@ bool ReadBlockFromDisk(CBlock& block, const CDiskBlockPos& pos, const Consensus:
     catch (const std::exception& e) {
         return error("%s: Deserialize or I/O error - %s at %s", __func__, e.what(), pos.ToString());
     }
-if (IsX16SOV()) LogPrintf("X16SOV block\n"); else LogPrintf("X16r block\n");
+if (IsX16SOV()) LogPrintf("X16SOV block\n"); else LogPrintf("X16R block\n");
     // Check the header
-    if (!CheckProofOfWork(IsX16SOV() ? block.GetHashX16SOV() : block.GetHashX16r(), block.nBits, consensusParams))
+    if (!CheckProofOfWork(IsX16SOV() ? block.GetHashX16SOV() : block.GetHashX16R(), block.nBits, consensusParams))
         return error("ReadBlockFromDisk: Errors in block header at %s", pos.ToString());
 
     return true;
@@ -3111,7 +3111,7 @@ bool FindUndoPos(CValidationState &state, int nFile, CDiskBlockPos &pos, unsigne
 bool CheckBlockHeader(const CBlockHeader& block, CValidationState& state, bool fCheckPOW)
 {
     // Check proof of work matches claimed amount
-    if (fCheckPOW && !CheckProofOfWork(IsX16SOV() ? block.GetHashX16SOV() : block.GetHashX16r(), block.nBits, Params().GetConsensus()))
+    if (fCheckPOW && !CheckProofOfWork(IsX16SOV() ? block.GetHashX16SOV() : block.GetHashX16R(), block.nBits, Params().GetConsensus()))
         return state.DoS(50, error("CheckBlockHeader(): proof of work failed"),
                          REJECT_INVALID, "high-hash");
 
