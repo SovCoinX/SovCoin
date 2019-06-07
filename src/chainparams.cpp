@@ -280,7 +280,7 @@ public:
         consensus.nZawyLwmaAjustedWeight = 3927;
 
         consensus.nPowTargetTimespan = 30 * 60 * 2; // SOV: 1 hour
-        consensus.nPowTargetSpacing = 2 * 60; // SOV: 2 minutes
+        consensus.nPowTargetSpacing = 2 * 30; // SOV: 2 minutes
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = false;
         consensus.useDarkGravityWave = false;
@@ -320,11 +320,11 @@ public:
 
         genesis = CreateGenesisBlock(1525413615UL, 1507179UL, 0x1e0ffff0, 1, 150000 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-       // assert(consensus.hashGenesisBlock == uint256S("0x00000ba049e5c1f95474ea3fc62d5f1b1632a294c20c22fea701134a43cf3068"));
-        //assert(genesis.hashMerkleRoot == uint256S("0xd5dec0980d7b84cc1c048eb8706afe68bbbdb07fdefab76de8d176dfcb858ae8"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000ba049e5c1f95474ea3fc62d5f1b1632a294c20c22fea701134a43cf3068"));
+        assert(genesis.hashMerkleRoot == uint256S("0xd5dec0980d7b84cc1c048eb8706afe68bbbdb07fdefab76de8d176dfcb858ae8"));
 
-        vSeeds.push_back(CDNSSeedData("testnet.sovproject.org", "testnet.seed.sovproject.org"));
-        vSeeds.push_back(CDNSSeedData("fixed-seeds.sovproject.org", "testnet.fixed-seeds.sovproject.org"));
+        vSeeds.push_back(CDNSSeedData("testnet.sovcore.org", "testnet.seed.sovcore.org"));
+        vSeeds.push_back(CDNSSeedData("fixed-seeds.sovcore.org", "testnet.fixed-seeds.sovcore.org"));
         // vFixedSeeds.clear();
         // vSeeds.clear();
 
@@ -400,7 +400,7 @@ public:
         consensus.nZawyLwmaAjustedWeight = 3927;
 
         consensus.nPowTargetTimespan = 30 * 60 * 2; // SOV: 1 hour
-        consensus.nPowTargetSpacing = 2 * 60; // SOV: 2 minutes
+        consensus.nPowTargetSpacing = 2 * 30; // SOV: 2 minutes
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = true;
         consensus.useDarkGravityWave = false;
@@ -433,8 +433,8 @@ public:
 
         genesis = CreateGenesisBlock(1522201627, 1282268, 0x1e0ffff0, 1, 150000 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-       // assert(consensus.hashGenesisBlock == uint256S("0x000005ec6d48ac579d697448a82e93127b94403770629399cf561caa216a694b"));
-        //assert(genesis.hashMerkleRoot == uint256S("0xd5dec0980d7b84cc1c048eb8706afe68bbbdb07fdefab76de8d176dfcb858ae8"));
+        assert(consensus.hashGenesisBlock == uint256S("0x000005ec6d48ac579d697448a82e93127b94403770629399cf561caa216a694b"));
+        assert(genesis.hashMerkleRoot == uint256S("0xd5dec0980d7b84cc1c048eb8706afe68bbbdb07fdefab76de8d176dfcb858ae8"));
 
         vFixedSeeds.clear(); //! Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();  //! Regtest mode doesn't have any DNS seeds.
