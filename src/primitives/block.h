@@ -61,7 +61,8 @@ public:
         return (nBits == 0);
     }
 
-    uint256 GetHash() const;
+    uint256 GetHashX16r() const;
+    uint256 GetHashX16SOV() const;
 
     int64_t GetBlockTime() const
     {
