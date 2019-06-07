@@ -468,6 +468,10 @@ void static SOVMiner(const CChainParams& chainparams, CConnman& connman)
                         // Found a solution
                         SetThreadPriority(THREAD_PRIORITY_NORMAL);
                         LogPrintf("SOVMiner:\n  proof-of-work found\n  hash: %s\n  target: %s\n", hash.GetHex(), hashTarget.GetHex());
+                        if(IsX16SOV())
+                           assert(hash == pblock->GetHashX16SOV());	
+                        else	
+                           assert(hash == pblock->GetHashX16R());
                         ProcessBlockFound(pblock, chainparams);
                         SetThreadPriority(THREAD_PRIORITY_LOWEST);
                         coinbaseScript->KeepScript();
