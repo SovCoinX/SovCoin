@@ -17,6 +17,7 @@
 #include "protocol.h" // For CMessageHeader::MessageStartChars
 #include "script/script_error.h"
 #include "sync.h"
+#include "util.h"
 #include "versionbits.h"
 #include "spentindex.h"
 
@@ -502,5 +503,7 @@ static const unsigned int REJECT_HIGHFEE = 0x100;
 static const unsigned int REJECT_ALREADY_KNOWN = 0x101;
 /** Transaction conflicts with a transaction already known */
 static const unsigned int REJECT_CONFLICT = 0x102;
+
+bool IsX16SOV();
 
 #endif // SOV_VALIDATION_H
