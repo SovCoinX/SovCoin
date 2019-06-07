@@ -174,7 +174,7 @@ UniValue generate(const UniValue& params, bool fHelp)
             IncrementExtraNonce(pblock, chainActive.Tip(), nExtraNonce);
         }
         while (nMaxTries > 0 && pblock->nNonce < nInnerLoopCount && 
-                !CheckProofOfWork(Isx16SOV(nHeight) ? pblock->GetHashX16SOV() : pblock->GetHashX16r(), pblock->nBits, Params().GetConsensus())) 
+                !CheckProofOfWork(Isx16SOV(nHeight) ? pblock->GetHashX16SOV() : pblock->GetHashX16R(), pblock->nBits, Params().GetConsensus())) 
         
         //while (!CheckProofOfWork(pblock->GetHash(), pblock->nBits, Params().GetConsensus())) {
             // Yes, there is a chance every nonce could fail to satisfy the -regtest
