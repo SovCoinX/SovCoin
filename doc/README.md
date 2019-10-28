@@ -1,7 +1,7 @@
 SOV Core 0.12.1
 =====================
 
-This is the official reference wallet for SOV digital currency and comprises the backbone of the SOV peer-to-peer network. You can [download SOV Core](https://www.sov.org/downloads/) or [build it yourself](#building) using the guides below.
+This is the official reference wallet for SOV digital currency and comprises the backbone of the SOV peer-to-peer network. You can [download SOV Core](https://github.com/SovCoinX/SovCoin/releases/latest) or [build it yourself](#building) using the guides below.
 
 Running
 ---------------------
@@ -24,9 +24,9 @@ Drag SOV-Qt to your applications folder, and then run SOV-Qt.
 
 ### Need Help?
 
-* See the [SOV documentation](https://dashpay.atlassian.net/wiki/display/DOC)
+* Look for help on the [Discord](https://discord.gg/DBNtrYR)
 for help and more information.
-* Ask for help on the [BitcoinTalk](https://bitcointalk.org/) forums.
+* Look for help on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=5057932) ANN.
 
 Building
 ---------------------
@@ -56,7 +56,7 @@ The SOV Core repo's [root README](/README.md) contains relevant information on t
 - [Dnsseed Policy](dnsseed-policy.md)
 
 ### Resources
-* Discuss on the [SOVTalk](https://sovtalk.org/) forums, in the Development & Technical Discussion board.
+* Discuss on the [Discord](https://discord.gg/DBNtrYR).
 * Discuss on [#sovcrypto](http://webchat.freenode.net/?channels=sovcrypto) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=sovcrypto).
 
 ### Miscellaneous
