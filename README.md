@@ -2,7 +2,9 @@ SOV Core 2.0.1
 ===============================
 
 Website: https://www.sovcore.org
-Explorer: http://explorer.sovcore.org/
+
+Explorer: http://explorer.sovcore.org
+
 Exchange: https://crex24.com/exchange/SOV-BTC
 
 What is SOV?
@@ -14,8 +16,10 @@ to operate with no central authority: managing transactions and issuing money
 are carried out collectively by the network. SOV Core is the name of the open
 source software which enables the use of this currency.
 
-For more information, as well as an immediately useable, binary version of
-the SOV Core software, see https://www.sovcore.org/.
+For more information please look in the [doc folder](/doc/), as well as the project website https://www.sovcore.org.
+
+For an immediately useable, binary version of
+the SOV Core software, see [latest release](https://github.com/SovCoinX/SovCoin/releases/latest)
 
 
 License
